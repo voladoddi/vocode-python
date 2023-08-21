@@ -24,6 +24,7 @@ from vocode.streaming.models.transcript import Transcript
 from vocode.streaming.vector_db.factory import VectorDBFactory
 
 
+
 class ChatGPTAgent(RespondAgent[ChatGPTAgentConfig]):
     def __init__(
         self,

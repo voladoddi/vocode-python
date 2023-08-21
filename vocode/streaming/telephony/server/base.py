@@ -103,6 +103,7 @@ class TelephonyServer:
         self.logger.info(f"Set up recordings endpoint at https://{self.base_url}/recordings/{{conversation_id}}")
  
     def events(self, request: Request):
+        print(f"EVENTS-POOJA: {self.__class__.__name__}")
         return Response()
 
     async def recordings(self, request: Request, conversation_id: str):

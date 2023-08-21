@@ -332,10 +332,13 @@ class RespondAgent(BaseAgent[AgentConfigType]):
 
     def _get_action_config(self, function_name: str) -> Optional[ActionConfig]:
         if self.agent_config.actions is None:
+            print(f"returning nnone action config")
             return None
         for action_config in self.agent_config.actions:
             if action_config.type == function_name:
+                print(f"returning {action_config.type}")
                 return action_config
+            print(f"returning none action config")
         return None
 
     async def call_function(self, function_call: FunctionCall, agent_input: AgentInput):

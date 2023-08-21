@@ -11,6 +11,7 @@ class ActionType(str, Enum):
     TRANSFER_CALL = "action_transfer_call"
 
 
+
 class ActionConfig(TypedModel, type=ActionType.BASE):
     pass
 
